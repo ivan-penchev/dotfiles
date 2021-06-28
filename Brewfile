@@ -23,6 +23,7 @@ cask "microsoft-teams"
 cask "jetbrains-toolbox"
 cask "spotify"
 cask "docker"
+cask "dotnet"
 
 # System
 brew "zsh-completions"
@@ -51,6 +52,8 @@ brew "rlwrap"
 
 # Ops
 brew "azure-cli"
+brew "terraform"
+brew "vault-cli"
 
 # Images and Audio
 brew "imagemagick"
