@@ -53,7 +53,7 @@ brew "rlwrap"
 # Ops
 brew "azure-cli"
 brew "terraform"
-brew "vault-cli"
+brew "vault"
 
 # Images and Audio
 brew "imagemagick"
