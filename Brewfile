@@ -24,6 +24,7 @@ cask "jetbrains-toolbox"
 cask "spotify"
 cask "docker"
 cask "dotnet"
+cask "postman"
 
 # System
 brew "zsh-completions"
