@@ -20,11 +20,14 @@ cask "teamviewer"
 cask "microsoft-powerpoint"
 cask "microsoft-word"
 cask "microsoft-teams"
+cask "microsoft-excel"
 cask "jetbrains-toolbox"
+cask "datagrip"
 cask "spotify"
 cask "docker"
 cask "dotnet"
 cask "postman"
+cask "iterm2"
 
 # System
 brew "zsh-completions"
@@ -53,14 +56,19 @@ brew "rlwrap"
 
 # Ops
 brew "azure-cli"
+brew "awscli"
 brew "terraform"
 brew "vault"
+brew "kubeval"
+brew "kubectx"
+
 
 # Images and Audio
 brew "imagemagick"
 brew "ffmpeg"
 
 # Archive & Git
+brew "gh"
 brew "xz"
 brew "git"
 brew "git-lfs"
@@ -73,12 +81,20 @@ brew "jo"
 
 # Dev
 brew "yarn"
-brew "python"
+brew "python@3.8"
 brew "go"
 brew "openjdk"
 brew "kind"
 brew "node"
 
+
+#language specific
+#Go
+brew "golangci-lint"
+#Node 
+brew "nvm"
+#Os 
+brew "direnv"
 
 # App Store
 # mas "uBlock", id: 1385985095
