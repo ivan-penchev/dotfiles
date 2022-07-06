@@ -25,7 +25,7 @@ cask "jetbrains-toolbox"
 cask "datagrip"
 cask "spotify"
 cask "docker"
-cask "dotnet"
+#cask "dotnet"
 cask "postman"
 cask "iterm2"
 
