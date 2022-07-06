@@ -16,7 +16,7 @@ cask "microsoft-azure-storage-explorer"
 cask "vlc"
 cask "wireshark"
 cask "gimp"
-cask "teamviewer"
+#cask "teamviewer"
 #cask "microsoft-powerpoint"
 #cask "microsoft-word"
 #cask "microsoft-teams"
@@ -55,7 +55,7 @@ brew "rlwrap"
 
 
 # Ops
-brew "azure-cli"
+#brew "azure-cli"
 brew "awscli"
 brew "terraform"
 brew "vault"
