@@ -4,9 +4,9 @@
   imports = [
     ./options.nix
     ./system/common.nix
-    ./apps/vscode.nix
-    ./development/packages.nix
-    ./utils/packages.nix
+    ./apps
+    ./development
+    ./utils
     ./shell/zsh.nix
     ./shell/git.nix
   ];

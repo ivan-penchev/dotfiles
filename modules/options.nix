@@ -35,6 +35,18 @@ with lib;
       vscode = {
         enable = mkEnableOption "Visual Studio Code";
       };
+      qbittorrent = {
+        enable = mkEnableOption "qBittorrent";
+      };
+      discord = {
+        enable = mkEnableOption "Discord";
+      };
+      vlc = {
+        enable = mkEnableOption "VLC Media Player";
+      };
+      bitwarden = {
+        enable = mkEnableOption "Bitwarden Client";
+      };
     };
 
     shell = {

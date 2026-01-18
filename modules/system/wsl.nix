@@ -9,6 +9,16 @@ with lib;
     
     # Ensure Windows binaries (like Code.exe) can be executed
     wsl.interop.register = true;
+    systemd.services.fix-wsl-interop = {
+      description = "Fix WSL Interop for Windows executables";
+      after = [ "systemd-binfmt.service" ];
+      wantedBy = [ "multi-user.target" ];
+      serviceConfig = {
+        Type = "oneshot";
+        RemainAfterExit = true;
+        ExecStart = "${pkgs.bash}/bin/bash -c 'echo :WSLInterop:M::MZ::/init:PF > /proc/sys/fs/binfmt_misc/register || true'";
+      };
+    };
     
     networking.hostName = "NixOS";
 

@@ -17,6 +17,7 @@
   
   # Personal stuff
   ivan-config-options.apps.vscode.enable = true;
+  ivan-config-options.apps.qbittorrent.enable = true;
   
   # Add Spotify via Homebrew for Personal machine
   homebrew.casks = [
