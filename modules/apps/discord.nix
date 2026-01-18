@@ -4,6 +4,6 @@ with lib;
 
 {
   config = mkIf config.ivan-config-options.apps.discord.enable {
-    environment.systemPackages = lib.optional pkgs.stdenv.isLinux pkgs.discord;
+    environment.systemPackages = [ pkgs.discord ];
   };
 }

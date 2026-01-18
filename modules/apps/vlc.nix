@@ -4,6 +4,8 @@ with lib;
 
 {
   config = mkIf config.ivan-config-options.apps.vlc.enable {
-    environment.systemPackages = lib.optional pkgs.stdenv.isLinux pkgs.vlc;
+    environment.systemPackages = [ 
+      (if pkgs.stdenv.isDarwin then pkgs.vlc-bin else pkgs.vlc)
+    ];
   };
 }

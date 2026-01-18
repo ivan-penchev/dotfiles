@@ -21,10 +21,11 @@
   # Work stuff
   ivan-config-options.apps.vscode.enable = true;
 
-  # Work Apps via Homebrew
-  homebrew.casks = [
-    "slack"
-    "zoom"
-    "docker"
+  # Apps via Nixpkgs
+  environment.systemPackages = with pkgs; [
+    slack
+    zoom-us
+    # docker # Docker Desktop isn't in nixpkgs for Darwin, usually. 'colima' + 'docker-client' is the nix way.
+    docker-client
   ];
 }

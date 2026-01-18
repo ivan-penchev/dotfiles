@@ -13,14 +13,12 @@
   # Enable Development Packages
   ivan-config-options.development-packages.enable = true;
   ivan-config-options.development-packages.tools.python = true;
-  ivan-config-options.development-packages.tools.dev = true; # node, jq, etc.
+  ivan-config-options.development-packages.tools.dev = true; 
   
   # Personal stuff
   ivan-config-options.apps.vscode.enable = true;
   ivan-config-options.apps.qbittorrent.enable = true;
   
-  # Add Spotify via Homebrew for Personal machine
-  homebrew.casks = [
-    "spotify"
-  ];
+  # Spotify via Nixpkgs (might be Linux only or broken on Darwin, but user asked for Nix only)
+  # environment.systemPackages = [ pkgs.spotify ]; 
 }
