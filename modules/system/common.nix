@@ -9,6 +9,15 @@ with lib;
     # Allow unfree packages globally
     nixpkgs.config.allowUnfree = true;
 
+    fonts = {
+      packages = with pkgs; [
+        material-design-icons
+        font-awesome
+        nerd-fonts.symbols-only
+        nerd-fonts._0xproto
+      ];
+    };
+
     # Nix configuration
     nix = {
       settings = {

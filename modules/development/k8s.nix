@@ -9,8 +9,6 @@
         k9s
         kind
         kubectx
-        oras
-        skopeo
         argocd
         fluxcd
         cilium-cli
