@@ -9,15 +9,6 @@ with lib;
     # Allow unfree packages globally
     nixpkgs.config.allowUnfree = true;
 
-    fonts = {
-      packages = with pkgs; [
-        material-design-icons
-        font-awesome
-        nerd-fonts.symbols-only
-        nerd-fonts._0xproto
-      ];
-    };
-
     # Nix configuration
     nix = {
       settings = {
@@ -45,6 +36,11 @@ with lib;
         # Linux (NixOS) specific interval
         dates = "weekly";
       });
+    };
+
+    # Secret definitions at common level
+    sops.secrets.gemini_api_key = { 
+      owner = config.ivan-config-options.user.name;
     };
   };
 }

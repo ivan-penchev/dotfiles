@@ -16,6 +16,7 @@
   # Enabled as requested
   ivan-config-options.development-packages.tools.go = true;
   ivan-config-options.development-packages.tools.k8s = true;
+  ivan-config-options.development-packages.tools.ai = true;
 
   ivan-config-options.apps.vscode.enable = false; # VSCode is better on Windows side
   

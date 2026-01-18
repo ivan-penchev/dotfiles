@@ -27,6 +27,13 @@ in
           ll = "ls -l";
         };
 
+        initContent = ''
+          # Load Gemini API Key from SOPS if it exists
+          if [ -f "${config.sops.secrets.gemini_api_key.path}" ]; then
+            export GEMINI_API_KEY=$(cat "${config.sops.secrets.gemini_api_key.path}")
+          fi
+        '';
+
         syntaxHighlighting = {
           enable = true;
           highlighters = [

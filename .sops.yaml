@@ -1,0 +1,8 @@
+keys:
+  - &ivan age1uwawu4ezunvr7zrvsrass3vnwe7ymwhus5xh4ssyv0ukmqlflqmq20ckkx
+creation_rules:
+  # Simplest regex to ensure it matches on Windows and Linux
+  - path_regex: .*secrets\.yaml$
+    key_groups:
+      - age:
+          - *ivan

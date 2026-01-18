@@ -62,6 +62,14 @@ with lib;
       enable = mkEnableOption "Utility packages";
     };
 
+    sops = {
+      ageKeyFile = mkOption {
+        type = types.str;
+        default = "/mnt/c/Users/ivan/.config/sops/age/keys.txt";
+        description = "Path to the sops age key file";
+      };
+    };
+
     development-packages = {
       enable = mkEnableOption "shared development packages";
       tools = {
@@ -70,6 +78,7 @@ with lib;
         rust = mkEnableOption "Rust development";
         k8s = mkEnableOption "Kubernetes tools";
         cloud = mkEnableOption "Cloud tools";
+        ai = mkEnableOption "AI CLI tools (Copilot, Gemini, etc.)";
         dev = mkEnableOption "General Dev Tools";
       };
     };
