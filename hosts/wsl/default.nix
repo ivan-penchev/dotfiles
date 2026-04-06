@@ -29,6 +29,9 @@
   wsl.enable = true;
   virtualisation.docker.enable = true;
 
+  # Ensure current user can access /var/run/docker.sock without sudo
+  users.users.${config.ivan-config-options.user.name}.extraGroups = lib.mkAfter [ "docker" ];
+
   system.stateVersion = "25.11";
 
   environment.systemPackages = with pkgs; [
