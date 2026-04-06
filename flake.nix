@@ -22,29 +22,18 @@
       url = "github:nix-community/NixOS-WSL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Sops (Secrets)
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, nixos-wsl, sops-nix, ... }@inputs:
+  outputs = { self, nixpkgs, darwin, home-manager, nixos-wsl, ... }@inputs:
     let
       # Shared configuration for all systems
       # We import the 'modules' directory which contains our custom options and logic
       sharedModules = [
         ./modules
         home-manager.nixosModules.home-manager
-        sops-nix.nixosModules.sops
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          # Pass sops-nix inputs to home-manager
-          home-manager.sharedModules = [
-            sops-nix.homeManagerModules.sops
-          ];
         }
       ];
 
@@ -52,13 +41,9 @@
         ./modules
         ./modules/system/darwin.nix
         home-manager.darwinModules.home-manager
-        sops-nix.darwinModules.sops
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.sharedModules = [
-            sops-nix.homeManagerModules.sops
-          ];
         }
       ];
       

@@ -37,10 +37,5 @@ with lib;
         dates = "weekly";
       });
     };
-
-    # Secret definitions at common level
-    sops.secrets.gemini_api_key = { 
-      owner = config.ivan-config-options.user.name;
-    };
   };
 }

@@ -13,11 +13,6 @@
       git
       unzip
       tree
-      
-      # Encryption tools
-      sops
-      age
-      ssh-to-age
     ];
 
     # User Packages

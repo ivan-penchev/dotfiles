@@ -7,6 +7,5 @@
     ./fzf.nix
     ./ripgrep.nix
     ./zoxide.nix
-    ./sops.nix
   ];
 }

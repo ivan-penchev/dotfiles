@@ -27,6 +27,11 @@
 
   # Enable WSL
   wsl.enable = true;
+  virtualisation.docker.enable = true;
 
   system.stateVersion = "25.11";
+
+  environment.systemPackages = with pkgs; [
+    docker
+  ];
 }
